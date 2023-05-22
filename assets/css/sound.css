@@ -17,11 +17,33 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   box-sizing: border-box;
-  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   height: 100vh;
   background-color: steelblue;
+  text-align: center;
+}
+.btn {
+  width: 30%;
+}
+.btn {
+  margin: 1rem;
+}
+.btn {
+  background-color: rebeccapurple;
+  border-radius: 1rem;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
   color: #fff;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:focus {
+  outline: none;
 }
