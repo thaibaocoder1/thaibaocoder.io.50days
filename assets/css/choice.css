@@ -56,3 +56,8 @@ h3 {
 .tag.highlight {
   background-color: #273c75;
 }
+.text {
+  color: #2b88f0;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
