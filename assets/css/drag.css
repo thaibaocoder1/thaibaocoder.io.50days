@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+body,
+html {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+  transition: all 0.5s ease-in-out;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: lightblue;
+}
+.empty {
+  height: 15rem;
+  width: 15rem;
+  margin: 1rem;
+  border: 3px solid #000;
+  background-color: #fff;
+}
+.fill {
+  background-image: url("https://images.unsplash.com/photo-1687226197732-f91552499640?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+  height: 15rem;
+  width: 15rem;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hold {
+  border: 5px solid #ccc;
+}
+.hovered {
+  background-color: #333;
+  border-color: #fff;
+  border-style: dashed;
+}
