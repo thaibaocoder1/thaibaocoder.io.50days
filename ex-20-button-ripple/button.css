@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+body,
+html {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+  transition: all 0.5s ease-in-out;
+}
+body {
+  font-size: 1.6rem;
+  background-color: #000;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+button {
+  background-color: purple;
+  color: #fff;
+  border: 1px solid purple;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  overflow: hidden;
+  margin: 1rem 0;
+  position: relative;
+}
+button:focus {
+  outline: none;
+}
+button .circle {
+  position: absolute;
+  background-color: #fff;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
