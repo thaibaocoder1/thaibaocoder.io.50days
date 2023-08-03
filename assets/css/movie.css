@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+body,
+html {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+}
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+}
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.search::placeholder {
+  color: #7378c7;
+}
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin: 2rem;
+}
+.movie {
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.movie-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  position: relative;
+}
+.movie-view {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 1rem;
+  background-color: #7378c7;
+  border: 0;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.movie-view i {
+  pointer-events: none;
+}
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.movie-info span.green {
+  color: lightgreen;
+}
+.movie-info span.red {
+  color: red;
+}
+.movie-info span.orange {
+  color: orange;
+}
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: all 0.3s ease-in-out;
+}
+.movie:hover .overview {
+  transform: translateY(0);
+}
+.btn {
+  border: 0;
+  display: block;
+  background-color: var(--secondary-color);
+  padding: 1.5rem 3rem;
+  font-family: inherit;
+  color: #fff;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  background-color: #7378c7;
+}
