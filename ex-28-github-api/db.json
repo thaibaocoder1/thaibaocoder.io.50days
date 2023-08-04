@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "This is example of title",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ad molestiae voluptates provident, velit quisquam quidem omnis odit eum est alias dolor ipsam facere perferendis a consectetur pariatur dignissimos architecto!",
+      "author": "baodev"
+    },
+    {
+      "title": "This is example of add post",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ad molestiae voluptates provident, velit quisquam quidem omnis odit eum est alias dolor ipsam facere perferendis a consectetur pariatur dignissimos architecto!",
+      "author": "user",
+      "id": 2
+    },
+    {
+      "title": "This is example of add post",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ad molestiae voluptates provident, velit quisquam quidem omnis odit eum est alias dolor ipsam facere perferendis a consectetur pariatur dignissimos architecto!",
+      "author": "user",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
