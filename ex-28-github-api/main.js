@@ -2,15 +2,27 @@ const APIURL = "https://api.github.com/users/";
 const form = document.getElementById("form");
 const mainCard = document.getElementById("main");
 const searchInput = document.getElementById("search");
-async function getUser(username) {
+getUser("bradtraversy");
+function getUser(username) {
   try {
-    const response = await fetch(APIURL + username);
-    const data = await response.json();
-    createUserCard(data);
+    axios.get(APIURL + username).then((res) => {
+      console.log(res.data);
+      createUserCard(res.data);
+      getRespos(username);
+    });
   } catch (err) {
-    if (err.response.status == 404) {
-      createErrorCard("No profile with this username");
+    if (err.response.status === 404) {
+      throw new Error(err);
+      createErrorCard();
     }
+  }
+}
+async function getRespos(username) {
+  try {
+    const { data } = await axios(APIURL + username + "/repos");
+    addReposCard(data);
+  } catch (err) {
+    createErrorCard("Problem fetching repos");
   }
 }
 function createErrorCard(msg) {
@@ -20,6 +32,18 @@ function createErrorCard(msg) {
   </div>
   `;
   mainCard.innerHTML = cardHTML;
+}
+function addReposCard(repos) {
+  const resposEl = document.getElementById("repos");
+  if (!resposEl) return;
+  repos.slice(0, 10).forEach((repo) => {
+    const repoEl = document.createElement("a");
+    repoEl.classList.add("repo");
+    repoEl.href = repo.html_url;
+    repoEl.target = "_blank";
+    repoEl.innerText = repo.name;
+    resposEl.appendChild(repoEl);
+  });
 }
 function createUserCard(user) {
   const { avatar_url, name, bio, followers, following, public_repos } = user;
@@ -41,9 +65,6 @@ function createUserCard(user) {
       <li>${public_repos} <strong>Repos</strong></li>
     </ul>
     <div id="repos">
-      <a href="#" class="repo">Repo 1</a>
-      <a href="#" class="repo">Repo 2</a>
-      <a href="#" class="repo">Repo 3</a>
     </div>
   </div></div>
   `;
