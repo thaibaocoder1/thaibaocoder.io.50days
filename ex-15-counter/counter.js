@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
     const counterFollers = () => {
       const target = +counter.dataset.target;
       const c = +counter.innerText;
-      const increment = target / 2000;
+      const increment = target / 200;
       if (c < target) {
         counter.innerText = `${Math.ceil(c + increment)}`;
         setTimeout(counterFollers, 1);
