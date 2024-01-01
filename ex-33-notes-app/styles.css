@@ -48,12 +48,12 @@ body {
   display: inline-block;
 }
 .note textarea {
+  height: 40rem;
+  width: 100%;
   font-size: 1.2rem;
   border: none;
   outline: none;
-  height: 40rem;
   font-family: inherit;
-  width: 100%;
   padding: 2rem;
 }
 .hidden {
